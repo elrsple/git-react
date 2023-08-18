@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/git-react/static/css/main.073c9b0a.css",
-    "main.js": "/git-react/static/js/main.2ecbb479.js",
+    "main.css": "/git-react/static/css/main.3a9f2ce0.css",
+    "main.js": "/git-react/static/js/main.c83017f4.js",
     "static/js/787.27fa9907.chunk.js": "/git-react/static/js/787.27fa9907.chunk.js",
-    "static/media/logo.svg": "/git-react/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/irvins-logo.png": "/git-react/static/media/irvins-logo.7f683840c67912b69993.png",
     "index.html": "/git-react/index.html",
-    "main.073c9b0a.css.map": "/git-react/static/css/main.073c9b0a.css.map",
-    "main.2ecbb479.js.map": "/git-react/static/js/main.2ecbb479.js.map",
+    "main.3a9f2ce0.css.map": "/git-react/static/css/main.3a9f2ce0.css.map",
+    "main.c83017f4.js.map": "/git-react/static/js/main.c83017f4.js.map",
     "787.27fa9907.chunk.js.map": "/git-react/static/js/787.27fa9907.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.2ecbb479.js"
+    "static/css/main.3a9f2ce0.css",
+    "static/js/main.c83017f4.js"
   ]
 }
