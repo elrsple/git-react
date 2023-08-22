@@ -25,12 +25,18 @@ function RegistrationForm(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here, e.g., send data to a server
-    console.log(formData);
+    
+    // Simulate registration process by storing data in local storage
+    localStorage.setItem("registeredUser", JSON.stringify(formData));
+    window.alert("Successful Registration!");
+    // After successful registration, switch to the login form
+    props.onFormSwitch("login")
+
+
   };
 
   return (
-    <div className="registration-form">
+  <div className="registration-form">
   <div className="logo-container">
     <img
       src={require("./images/irvins-logo.png")}
@@ -138,11 +144,12 @@ function RegistrationForm(props) {
           onChange={handleChange}
           required
         />
-
         <button type="submit">Register</button>
       </form>
       <button className= "link-btn" onClick={()=>props.onFormSwitch('login')}>Already have an account? Login here!</button>
+
     </div>
+    
   );
 }
 

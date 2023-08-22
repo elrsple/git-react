@@ -6,8 +6,18 @@ export const Login = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(user);
+
+    // Simulate a login check here (you can replace this with your actual login logic)
+    const registeredUser = JSON.parse(localStorage.getItem("registeredUser"));
+    if (registeredUser && user === registeredUser.user && pass === registeredUser.password) {
+      // Successful login, switch to the Profile page
+      props.onFormSwitch("profile");
+    } else {
+      window.alert("Login Failed");
+      console.log("Login failed"); // Handle failed login
+    }
   };
+
   return (
     <div className="auth-form-container">
     <img src={IrvinLogo} alt="logo" style ={{width:'250px',}} /> 

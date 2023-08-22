@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { Login } from "./Login";
 import RegistrationForm from "./RegisterCollab";
+import Profile from "./Profile";
 
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
@@ -11,12 +12,13 @@ function App() {
 
   return (
     <div className="App">
-      {
-      currentForm === "login" ? 
-        <Login onFormSwitch = {toggleForm} />
-       : 
-        <RegistrationForm onFormSwitch ={toggleForm} />
-      }
+      {currentForm === "login" ? (
+        <Login onFormSwitch={toggleForm} />
+      ) : currentForm === "register" ? (
+        <RegistrationForm onFormSwitch={toggleForm} />
+      ) : (
+        <Profile onFormSwitch={toggleForm} />
+      )}
     </div>
   );
 }
