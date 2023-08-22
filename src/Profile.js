@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './profile.css';
+import IrvinProfile from './images/irvins-profile-logo.png'
 
 const Profile = (props) => {
   // Retrieve user data from localStorage
   const storedUserJSON = localStorage.getItem('registeredUser');
   const storedUser = storedUserJSON ? JSON.parse(storedUserJSON) : null;
-
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [editing, setEditing] = useState(false);
   const [editedUser, setEditedUser] = useState(storedUser);
 
@@ -25,6 +26,11 @@ const Profile = (props) => {
 
   const handleSave = () => {
     // Save the edited user data to local storage
+    if (editedUser.password !== confirmPassword) {
+      alert("Passwords do not match. Please confirm your password correctly.");
+      return;
+    }
+
     localStorage.setItem('registeredUser', JSON.stringify(editedUser));
     setEditing(false);
     alert('Profile updated successfully!');
@@ -32,6 +38,7 @@ const Profile = (props) => {
 
   return (
     <div className="profile-container">
+    <img src={IrvinProfile} alt="logo" style ={{width:'150px',}} /> 
       <h2>Profile Page:</h2>
       <h3><em>User's Personal Information</em></h3>
       {editedUser ? (
@@ -93,7 +100,14 @@ const Profile = (props) => {
                 value={editedUser.password}
                 onChange={handleChange}
               /> <br></br>
-  
+              <label><strong>Confirm Password:</strong></label>
+          <input
+            className="input-pass"
+            type="password"
+            name="confirmPassword"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          /><br />
               {/* Include other editable profile fields */}
   
               <button class="save-button" onClick={handleSave}>Save</button>
