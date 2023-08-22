@@ -48,4 +48,26 @@
   .edit-email{
     margin-left: 50px;
   }
+
+  .input-email{
+    border: 1px solid black;
+    padding: 3px; 
+    border-radius: 4px; 
+    width:fit-content;
+  }
   
+  .input-address{
+    border: 1px solid black;
+    padding: 3px; 
+    border-radius: 4px; 
+  }
+  .input-phone{
+    border: 1px solid black;
+    padding: 3px; 
+    border-radius: 4px; 
+  }
+  .input-pass{
+    border: 1px solid black;
+    padding: 3px; 
+    border-radius: 4px; 
+  }

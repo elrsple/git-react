@@ -32,7 +32,8 @@ const Profile = (props) => {
 
   return (
     <div className="profile-container">
-      <h2>Personal Information</h2>
+      <h2>Profile Page:</h2>
+      <h3><em>User's Personal Information</em></h3>
       {editedUser ? (
         <div className="profile-details">
           <p><strong>Account Number*:</strong> {"123-456-789"}</p>
@@ -44,14 +45,25 @@ const Profile = (props) => {
           <p><strong>Phone Number:</strong> {editedUser.phonenumber}</p>
           <p><strong>Date Of Birth*:</strong> {editedUser.dob}</p>
           <p><strong>Country*:</strong> {editedUser.country}</p>
-          <p><strong>Password:</strong> {editedUser.password}</p>
+          <p>
+            <strong>Password:</strong>{" "} 
+            {editedUser.password.replace(/./g, "*")} 
+          </p>
           {/* Include other profile fields as needed */}
+
+          {/* Conditionally render the line and heading when in editing mode */}
+          {editing && (
+            <>
+              <hr />
+              <h3><em>Editable Fields</em></h3>
+            </>
+          )}
           
           {editing ? (
             <>
               {/* Editable input fields */}
-              <label class="edit-email"><strong>Email:</strong></label>
-              <input
+              <label><strong>Email:</strong></label>
+              <input class="input-email"
                 type="email"
                 name="email"
                 value={editedUser.email}
@@ -59,7 +71,7 @@ const Profile = (props) => {
               />
 
               <label><strong>Address:</strong></label>
-              <input
+              <input class="input-address"
                 type="text"
                 name="address"
                 value={editedUser.address}
@@ -67,7 +79,7 @@ const Profile = (props) => {
               /><br></br>
 
               <label><strong>Phone Number:</strong></label>
-              <input
+              <input class="input-phone"
                 type="text"
                 name="phonenumber"
                 value={editedUser.phonenumber}
@@ -75,7 +87,7 @@ const Profile = (props) => {
               /> 
 
               <label><strong>Password:</strong></label>
-              <input
+              <input class="input-pass"
                 type="password"
                 name="password"
                 value={editedUser.password}
