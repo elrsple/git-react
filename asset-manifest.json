@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/git-react/static/css/main.fb9b63bc.css",
-    "main.js": "/git-react/static/js/main.5fd19d90.js",
+    "main.css": "/git-react/static/css/main.e2790240.css",
+    "main.js": "/git-react/static/js/main.b8818527.js",
     "static/js/787.27fa9907.chunk.js": "/git-react/static/js/787.27fa9907.chunk.js",
     "static/media/irvins-logo.png": "/git-react/static/media/irvins-logo.7f683840c67912b69993.png",
     "index.html": "/git-react/index.html",
-    "main.fb9b63bc.css.map": "/git-react/static/css/main.fb9b63bc.css.map",
-    "main.5fd19d90.js.map": "/git-react/static/js/main.5fd19d90.js.map",
+    "main.e2790240.css.map": "/git-react/static/css/main.e2790240.css.map",
+    "main.b8818527.js.map": "/git-react/static/js/main.b8818527.js.map",
     "787.27fa9907.chunk.js.map": "/git-react/static/js/787.27fa9907.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb9b63bc.css",
-    "static/js/main.5fd19d90.js"
+    "static/css/main.e2790240.css",
+    "static/js/main.b8818527.js"
   ]
 }
