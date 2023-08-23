@@ -38,15 +38,23 @@ button {
   border-radius:10px;
   cursor: pointer;
   color: black;
-}
+} 
 
 
 .link-btn{
   background:none;
   color:black;
   text-decoration:underline;
-
 }
+.link-btn:hover{
+  color:blue;
+}
+
+.submit-btn:hover{
+  background-color:turquoise;
+  color:white;
+}
+
 
 /* Registration Form */
 .registration-form {

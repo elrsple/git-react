@@ -144,7 +144,7 @@ function RegistrationForm(props) {
           onChange={handleChange}
           required
         />
-        <button type="submit">Register</button>
+        <button className="submit-btn" type="submit">Register</button>
       </form>
       <button className= "link-btn" onClick={()=>props.onFormSwitch('login')}>Already have an account? Login here!</button>
 
